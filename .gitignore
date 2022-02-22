@@ -1,9 +1,11 @@
 .vscode
+.idea
 .DS_Store
 .next/
 node_modules/
 *.ffm
 *.bak
+*.mp4
 prototype/video
 history.db
 public/static/trackerHistory.json
