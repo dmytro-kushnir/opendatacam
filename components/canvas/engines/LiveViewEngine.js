@@ -70,7 +70,7 @@ class LiveViewEngine {
       // name -- text
       context.fillStyle = evaluateCSSVariable(colors.inverse);
       context.fillText(
-        `${objectTrackedScaled.name}`,
+        `${objectTrackedScaled.name} ${objectTrackedScaled.id}`,
         x + 10,
         y,
       );

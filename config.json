@@ -1,10 +1,8 @@
 {
   "OPENDATACAM_VERSION": "3.0.2",
-  "PATH_TO_YOLO_DARKNET" : "TO_REPLACE_PATH_TO_DARKNET",
-  "CMD_TO_YOLO_DARKNET" : "TO_REPLACE_PATH_TO_DARKNET/darknet",
-  "VIDEO_UPLOAD_FOLDER": "TO_REPLACE_PATH_TO_DARKNET/opendatacam_videos_uploaded",
-  "VIDEO_INPUT": "TO_REPLACE_VIDEO_INPUT",
-  "NEURAL_NETWORK": "TO_REPLACE_NEURAL_NETWORK",
+  "PATH_TO_YOLO_DARKNET" : "/var/local/darknet",
+  "VIDEO_INPUT": "file",
+  "NEURAL_NETWORK": "yolo-ants",
   "VIDEO_INPUTS_PARAMS": {
     "file": "opendatacam_videos/demo.mp4",
     "usbcam": "v4l2src device=/dev/video0 ! video/x-raw, framerate=30/1, width=640, height=360 ! videoconvert ! appsink",
@@ -28,12 +26,7 @@
   },
   "VALID_CLASSES": ["*"],
   "DISPLAY_CLASSES": [
-    { "class": "bicycle", "hexcode": "1F6B2"},
-    { "class": "person", "hexcode": "1F6B6"},
-    { "class": "truck", "hexcode": "1F69B"},
-    { "class": "motorbike", "hexcode": "1F6F5"},
-    { "class": "car", "hexcode": "1F697"},
-    { "class": "bus", "hexcode": "1F68C"}
+    { "class": "ant", "hexcode": "1F41C"}
   ],
   "PATHFINDER_COLORS": [
     "#1f77b4",
@@ -64,6 +57,11 @@
       "data": "cfg/coco.data",
       "cfg": "cfg/yolov4-tiny.cfg",
       "weights": "yolov4-tiny.weights"
+    },
+    "yolo-ants": {
+      "data": "cfg/yolo-ants.data",
+      "cfg": "cfg/yolo-ants.cfg",
+      "weights": "yolo-ants.weights"
     }
   },
   "TRACKER_ACCURACY_DISPLAY": {
