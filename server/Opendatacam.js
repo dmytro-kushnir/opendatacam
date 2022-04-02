@@ -1,4 +1,4 @@
-const Tracker = require('node-moving-things-tracker').Tracker;
+const Tracker = require('node-moving-things-tracker');
 const YOLO = require('./processes/YOLO');
 const computeLineBearing = require('./tracker/utils').computeLineBearing;
 const checkLineIntersection = require('./tracker/utils').checkLineIntersection;
